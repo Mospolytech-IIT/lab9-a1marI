@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Post</title>
+</head>
+<body>
+    <h1>Edit Post</h1>
+    <form action="/posts/update/{{ post.id }}/" method="post">
+        <input type="text" name="title" value="{{ post.title }}" required>
+        <textarea name="content" required>{{ post.content }}</textarea>
+        <input type="number" name="user_id" value="{{ post.user_id }}" required>
+        <button type="submit">Update Post</button>
+    </form>
+    <a href="/posts/">Back to Posts</a>
+</body>
+</html>
